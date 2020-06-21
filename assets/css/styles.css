@@ -1,0 +1,624 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #a17864;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #a17864;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --black: #000000;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Topup */
+body {
+  letter-spacing: 0.0625em;
+  font-family: "Varela Round", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Navbar base class */
+#mainNav {
+  min-height: 3.5rem;
+  background-color: #fff;
+}
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: #a17864;
+  border: 1px solid #a17864;
+}
+#mainNav .navbar-toggler:focus {
+  outline: none;
+}
+#mainNav .navbar-brand {
+  color: #000000;
+  font-weight: 700;
+  padding: 0.9rem 0;
+}
+#mainNav .navbar-nav .nav-item:hover {
+  color: fade(#fff, 80%);
+  outline: none;
+  background-color: transparent;
+}
+#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+  outline: none;
+  background-color: transparent;
+}
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #mainNav .nav-link {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #mainNav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  #mainNav .nav-link:active {
+    color: #fff;
+  }
+  #mainNav.navbar-shrink {
+    background-color: #fff;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #000000;
+  }
+  #mainNav.navbar-shrink .nav-link {
+    color: #000000;
+    padding: 1.5rem 1.5rem 1.25rem;
+    border-bottom: 0.25rem solid transparent;
+  }
+  #mainNav.navbar-shrink .nav-link:hover {
+    color: #a17864;
+  }
+  #mainNav.navbar-shrink .nav-link:active {
+    color: #735846;
+  }
+  #mainNav.navbar-shrink .nav-link.active {
+    color: #a17864;
+    outline: none;
+    border-bottom: 0.25rem solid #a17864;
+  }
+}
+
+/*==================== ==================== ====================*/
+/* Carousel base class */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 4rem;
+}
+.carousel-caption {
+  background-color: rgba(110, 110, 110, 0.7);
+  padding: 2rem;
+  bottom: 3rem;
+  z-index: 10;
+  border-radius: 1rem;
+}
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+/*==================== ==================== ====================*/
+/* Masthead base class */
+.mastheadA {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../img/planA/main_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.mastheadB {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../img/planB/main_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.masthead {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 35rem;
+}
+.masthead h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-family: "Sriracha", "Varela Round", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.masthead h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+  font-family: "Suez One", "Varela Round", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (min-width: 768px) {
+  .masthead h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .masthead h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
+}
+
+/*==================== ==================== ====================*/
+/* About Section */
+.about-section {
+  padding: 5rem 0;
+  background-image: url(../img/burger_bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.about-section p {
+  margin-bottom: 2rem;
+}
+@media (min-width: 992px) {
+  .about-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #a17864;
+  }
+}
+
+/*==================== ==================== ====================*/
+/* gallery Section */
+.gallery-section {
+  padding: 5rem 0;
+  background-image: url(../img/burger_bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.gallery-section .featured-text {
+  padding: 2rem;
+}
+@media (min-width: 992px) {
+  .gallery-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #a17864;
+  }
+}
+.gallery-section .gallery-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+@media (min-width: 992px) {
+  .gallery-section .gallery-text {
+    padding: 5rem;
+  }
+  .gallery-section .gallery-text hr {
+    border-color: #a17864;
+    border-width: 0.25rem;
+    width: 30%;
+  }
+}
+
+/*==================== ==================== ====================*/
+/* Suit Section */
+.suit_area {
+  display: block;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .suit_area {
+    padding-top: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .suit_area {
+    padding-top: 0;
+  }
+}
+
+.suit_area .suit_here .single_suit {
+  position: relative;
+  width: 50%;
+  float: left;
+}
+@media (max-width: 767px) {
+  .suit_area .suit_here .single_suit {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .suit_area .suit_here .single_suit {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+.suit_area .suit_here .single_suit::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: #1A0D01;
+  z-index: 1;
+  opacity: .4;
+}
+
+.suit_area .suit_here .single_suit .room_thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.suit_area .suit_here .single_suit .room_thumb img {
+  width: 100%;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.suit_area .suit_here .single_suit .room_thumb .room_heading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  bottom: 60px;
+  left: 70px;
+}
+@media (max-width: 767px) {
+  .suit_area .suit_here .single_suit .room_thumb .room_heading {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .suit_area .suit_here .single_suit .room_thumb .room_heading {
+    left: 30px;
+    bottom: 30px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .suit_area .suit_here .single_suit .room_thumb .room_heading {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+.suit_area .suit_here .single_suit .room_thumb .room_heading .room_heading_inner {
+  background-color: rgba(160, 160, 160, 0.3);
+  padding: 2rem;
+  bottom: 3rem;
+  z-index: 10;
+  border-radius: 1rem;
+}
+
+.suit_area .suit_here .single_suit .room_thumb .room_heading span {
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-bottom: 9px;
+  display: block;
+  position: relative;
+  z-index: 8;
+}
+.suit_area .suit_here .single_suit .room_thumb .room_heading h3 {
+  font-size: 34px;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 8;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .suit_area .suit_here .single_suit .room_thumb .room_heading h3 {
+    font-size: 20px;
+  }
+}
+
+.suit_area .suit_here .single_suit .room_thumb .room_heading span {
+  font-size: 30px;
+  font-weight: 700;
+  color: #F0542C;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.suit_area .suit_here .single_suit .room_thumb .room_heading p {
+  font-size: 16px;
+  color: #E8E8E8;
+  line-height: 28px;
+  position: relative;
+  z-index: 1;
+  margin-top: 9px;
+  margin-bottom: 18px;
+}
+@media (max-width: 767px) {
+  .suit_area .suit_here .single_suit .room_thumb .room_heading p {
+    font-size: 14px;
+    line-height: 22px;
+    z-index: 1;
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .suit_area .suit_here .single_suit .room_thumb .room_heading p {
+    font-size: 14px;
+    line-height: 22px;
+    z-index: 1;
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .suit_area .suit_here .single_suit .room_thumb .room_heading p br {
+    display: none;
+  }
+}
+
+.suit_area .suit_here .single_suit .room_thumb .room_heading a {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 600;
+  position: relative;
+  z-index: 8;
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 767px) {
+  .suit_area .suit_here .single_suit .room_thumb .room_heading a {
+    padding: 6px 20px;
+    font-size: 12px;
+  }
+}
+.suit_area .suit_here .single_suit .room_thumb .room_heading a:hover {
+  color: #F2C64D;
+}
+.suit_area .suit_here .single_suit:hover img {
+  width: 100%;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.suit_area .suit_here .single_suit:hover .room_heading a {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*==================== ==================== ====================*/
+/* Contact Section */
+.contact-section {
+  padding-top: 5rem;
+}
+.contact-section .card {
+  border: 0;
+  border-bottom: 0.25rem solid #a17864;
+}
+.contact-section .card h4 {
+  font-size: 0.8rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+.contact-section .card hr {
+  border-color: #a17864;
+  border-width: 0.25rem;
+  width: 3rem;
+}
+.contact-section .social {
+  margin-top: 5rem;
+}
+.contact-section .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+.contact-section .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.contact-section .social a:active {
+  color: #fff;
+}
+
+/*==================== ==================== ====================*/
+/* Timeline Section */
+.timeline-section {
+  padding: 5rem 0;
+  background-image: url(../img/burger_bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/*==================== ==================== ====================*/
+/* Price Section */
+.price-section {
+  padding: 5rem 0;
+  background-image: url(../img/burger_bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/*==================== ==================== ====================*/
+/* Footer Section */
+.footer {
+  padding: 5rem 0;
+}
+
+/*==================== ==================== ====================*/
+/* Components */
+/* primary */
+.border-primary {
+  border-color: #a17864 !important;
+}
+.text-primary {
+  color: #a17864 !important;
+}
+a.text-primary:hover, a.text-primary:focus {
+  color: #735846 !important;
+}
+
+/* badge */
+.badge-primary {
+  color: #fff;
+  background-color: #a17864;
+}
+a.badge-primary:hover, a.badge-primary:focus {
+  color: #fff;
+  background-color: #835c4f;
+}
+a.badge-primary:focus, a.badge-primary.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(100, 161, 157, 0.5);
+}
+
+/* a */
+a {
+  color: #a17864;
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover {
+  color: #735846;
+  text-decoration: underline;
+}
+
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* btn */
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+.btn-link {
+  font-weight: 400;
+  color: #a17864;
+  text-decoration: none;
+}
+.btn-link:hover {
+  color: #735846;
+  text-decoration: underline;
+}
+.btn-link:focus, .btn-link.focus {
+  text-decoration: underline;
+}
+.btn-link:disabled, .btn-link.disabled {
+  color: #6c757d;
+  pointer-events: none;
+}
+
+/* btn-primary */
+.btn-primary {
+  color: #fff;
+  background-color: #a17864;
+  border-color: #a17864;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #8b6b54;
+  border-color: #835c4f;
+}
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #8b6b54;
+  border-color: #835c4f;
+  box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0.5);
+}
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #a17864;
+  border-color: #a17864;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #835c4f;
+  border-color: #4a7b78;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0.5);
+}
+
+/* btn-outline-primary */
+.btn-outline-primary {
+  color: #a17864;
+  border-color: #a17864;
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #a17864;
+  border-color: #a17864;
+}
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(100, 161, 157, 0.5);
+}
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: #a17864;
+  background-color: transparent;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #a17864;
+  border-color: #a17864;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(100, 161, 157, 0.5);
+}
